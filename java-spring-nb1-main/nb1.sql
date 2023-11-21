@@ -1,7 +1,9 @@
+/*Adatbázis létrehozás*/
+
 CREATE DATABASE IF NOT EXISTS `nb1` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `nb1`;
-
-CREATE TABLE IF NOT EXISTS klub(
+/*Táblák létrehozása*/
+    CREATE TABLE IF NOT EXISTS klub(
    id        INTEGER  NOT NULL PRIMARY KEY AUTO_INCREMENT
   ,csapatnev VARCHAR(255) NOT NULL
 );
@@ -22,7 +24,7 @@ CREATE TABLE IF NOT EXISTS labdarugo(
   ,magyar     BOOLEAN NOT NULL
   ,ertek      INTEGER  NOT NULL
 );
-
+/*Labdarugók hozzáadása*/
 ALTER TABLE `labdarugo` ADD CONSTRAINT `klub_fk` FOREIGN KEY (`klubid`) REFERENCES `klub`(`id`) ON DELETE SET NULL ON UPDATE SET NULL; ALTER TABLE `labdarugo` ADD CONSTRAINT `poszt_fk` FOREIGN KEY (`posztid`) REFERENCES `poszt`(`id`) ON DELETE SET NULL ON UPDATE SET NULL;
 
 INSERT INTO klub(id,csapatnev) VALUES (1,'Vasas FC');
@@ -439,10 +441,6 @@ INSERT INTO `user_role` (`user_id`, `role_id`) VALUES
                                                    (1, 2),
                                                    (1, 3),
                                                    (3, 2);
-
---
--- Korrigálás nagyba
---
 
 UPDATE `labdarugo`
 SET magyar = magyar * -1;
