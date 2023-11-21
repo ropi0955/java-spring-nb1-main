@@ -18,7 +18,7 @@ import javax.validation.Valid;
 
 @Controller
 public class PlayerController {
-
+//Játékosok
     @Autowired
     private PlayerRepository playerRepository;
     @Autowired

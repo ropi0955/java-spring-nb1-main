@@ -10,6 +10,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
 public class UserController {
+    //Felhasználóhoz
 
     @Autowired
     UserRepository userRepository;

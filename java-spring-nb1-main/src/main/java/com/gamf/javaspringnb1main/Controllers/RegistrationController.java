@@ -17,7 +17,7 @@ import java.util.List;
 
 @Controller
 public class RegistrationController {
-
+//Regisztrációs oldal
     @Autowired
     private UserRepository userRepository;
 
