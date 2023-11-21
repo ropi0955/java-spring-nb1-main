@@ -1,11 +1,11 @@
 package com.gamf.javaspringnb1main.Controllers;
 
+import com.gamf.javaspringnb1main.Models.Post;
 import com.gamf.javaspringnb1main.Exceptions.ClubNotFoundException;
 import com.gamf.javaspringnb1main.Exceptions.PlayerNotFoundException;
 import com.gamf.javaspringnb1main.Exceptions.PostNotFoundException;
 import com.gamf.javaspringnb1main.Models.Club;
 import com.gamf.javaspringnb1main.Models.Player;
-import com.gamf.javaspringnb1main.Models.Post;
 import com.gamf.javaspringnb1main.Repositories.ClubRepository;
 import com.gamf.javaspringnb1main.Repositories.PlayerRepository;
 import com.gamf.javaspringnb1main.Repositories.PostRepository;
